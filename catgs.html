@@ -1,0 +1,161 @@
+<!DOCTYPE HTML>
+
+<html lang="en">
+    <head>
+    <meta charset="utf-8"> 
+           <script src="https://use.fontawesome.com/07b0ce5d10.js"></script>
+
+           <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+	<link href="font-awesome.css" rel="stylesheet" type="text/css">	
+	<link href="css/style.css" rel="stylesheet" type="text/css">
+	
+       
+
+       <script src="https://cdnjs.cloudflare.com/ajax/libs/bootbox.js/4.4.0/bootbox.min.js"></script>
+
+    </head>
+
+
+<body>
+
+
+
+
+<nav class="navbar navbar-default">
+  <ul class="nav navbar-nav">
+    <li class="active"><a href="adminDashboard.html">Dashboard</a></li>
+    <li><a href="index.html">Home</a></li>
+  </ul>
+</nav>
+
+<div class="container">
+
+
+      <div class="row">
+        <div class="col-md-3">
+        <i class="fa fa-user-circle-o" aria-hidden="true"></i>
+            <ul class="nav nav-pills nav-stacked">
+                <li ><a href="adminDashboard.html"><i class="fa fa-home fa-fw"></i>Home</a></li>
+                 <li><a href="issue.html"><i class="fa fa-pencil fa-fw"></i>Issue A Book</a></li>
+                <li><a href="memebrs.html"><i class="fa fa-users  fa-fw"></i>Members</a></li>
+                <li class="active"><a href="catgs.html"><i class="fa fa-list-alt fa-fw"></i>Categuries</a></li>
+                <li><a href="allbooks.html"><i class="fa fa-book fa-fw"></i>Books</a></li>
+            </ul>
+        </div>
+
+
+        <div class="col-md-9 well">
+           <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for Category..">
+
+<table id="myTable">
+  <tr class="header">
+    <th style="width:30%;">Category</th>
+    <th style="width:20%;">Number of books</th>
+    <th style="width:20%;">Operations</th>
+  </tr>
+  <tr>
+    <td>Self-help</td>
+    <td>20</td>
+
+     <td>
+  
+<button type="button" class="btn btn-info btn-xs">View</button>
+  </td>
+  </tr>
+
+  <tr>
+    <td>Young Adults</td>
+    <td>10</td>
+<td>
+<button type="button" class="btn btn-info btn-xs">View</button>
+    </td>
+
+  </tr>
+  
+ 
+</table>
+<br >
+
+<button type="button" class="btn btn-success" data-toggle="modal" data-target=".bs-example-modal-sm">Add new Category</button>
+
+<div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+  <div class="modal-dialog modal-sm" role="document">
+    <div class="modal-content">
+    
+<form>
+  <div class="form-group">
+   <h6> | Add new Category</h6>
+    <label for="CategoryName">Category's name</label>
+    <input class="form-control" id="CategoryName">
+  </div>
+  
+
+  <button type="submit" class="btn btn-default">Add</button>
+    <button type="submit" class="btn btn-danger">Cancel</button>
+</form>
+
+
+    </div>
+  </div>
+</div>
+        </idv>
+
+
+
+
+                   
+        
+   
+    
+
+    </div>
+</div>
+
+    
+
+
+
+   
+ 
+   
+   
+</body>
+<script>
+function myFunction() {
+  // Declare variables 
+  var input, filter, table, tr, td, i;
+  input = document.getElementById("myInput");
+  filter = input.value.toUpperCase();
+  table = document.getElementById("myTable");
+  tr = table.getElementsByTagName("tr");
+
+  // Loop through all table rows, and hide those who don't match the search query
+  for (i = 0; i < tr.length; i++) {
+    td = tr[i].getElementsByTagName("td")[0];
+    if (td) {
+      if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
+        tr[i].style.display = "";
+      } else {
+        tr[i].style.display = "none";
+      }
+    } 
+  }
+}
+
+function send() {
+    alert("notification sent!");
+}
+
+
+</script>
+</html>
