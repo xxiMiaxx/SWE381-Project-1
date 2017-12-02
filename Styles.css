@@ -82,7 +82,20 @@ body {margin:0;}
   background-color: black;
   color: black;
 }
-
-
-
-
+.panel-body.op{
+background-color: #383838; 
+}
+.panel.panel-default.yes
+ {
+  border:black;
+  background-color:#202020;
+  opacity:  0.9;
+}
+.bot-border {
+  border:black;
+}
+.panel-heading.u {
+  
+   background-color:#202020;
+   opacity: 0.9;
+}
