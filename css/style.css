@@ -451,8 +451,32 @@ color: #2c3e50;
 }
 
 .service-sec {
-    background: url('images/login.jpg') no-repeat center center;
+    background: url('../images/login.jpg') no-repeat center center;
     background-size: cover;
     color: #fff;
     position: relative;
 }
+
+
+.w3-bar-item{
+
+color:#8b4513;
+
+}
+
+.w3-blue{
+    background-color:#ffa500;
+}
+
+td{
+    color:#8b4513;
+}
+
+.navbar-inverse{
+
+     background-color:#8b4513;
+}
+
+.navbar-brand{
+
+	color:white;}
