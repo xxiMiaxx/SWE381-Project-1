@@ -653,6 +653,10 @@ a {
     width: 16.66666%
 }
 
+.orange-text {
+  color: orange;
+}
+
 .w3-col.s3 {
     width: 24.99999%
 }
@@ -1533,7 +1537,7 @@ a {
 .w3-gold,
 .w3-hover-red:hover {
     color: #fff;
-    background-color: #ff9a6e;
+    background-color: #CD853F;
 }
 
 .w3-sand,
