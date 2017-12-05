@@ -1,0 +1,96 @@
+
+margin{
+
+margin-left:50%;	
+}
+
+
+input.hidden {
+    position: absolute;
+    left: -9999px;
+}
+
+
+#profile-image1 {
+    cursor: pointer;
+  
+     width: 100px;
+    height: 100px;
+  border:2px solid white ;}
+
+
+  .tital{ font-size:16px; font-weight:500;}
+
+span#colors.hf{
+	font-size:25px;
+	margin-right:900px;
+}
+
+div.panel-heading.u{
+	
+	padding-bottom:50px;
+	
+}
+
+.bookpage{
+margin-left: 300px;	
+}
+div.clearfix.pad{
+	
+	padding-bottom:50px;
+	
+}
+
+   .bot-border{ border-bottom:1px #f8f8f8 solid;  margin:5px 0  5px 0}  
+   
+   .marginPhoto{
+	   margin-right: 50px;
+   }
+   
+   .marginBor{
+	   
+	   margin-left: 170px;
+   }
+   
+
+body {
+	margin:0;
+}
+
+.topnav {
+  overflow: hidden;
+  background-color: black;
+
+}
+
+.topnav a {
+  float: left;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: black;
+  color: black;
+}
+.panel-body.op{
+background-color: #383838; 
+}
+.panel.panel-default.yes
+ {
+  border:black;
+  background-color:#202020;
+  opacity:  0.9;
+}
+.bot-border {
+  border:black;
+}
+.panel-heading.u {
+  
+   background-color:#202020;
+   opacity: 0.9;
+}
