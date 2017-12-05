@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+<title>My Dashboard</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+           <script src="https://use.fontawesome.com/07b0ce5d10.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/js/bootstrap-datepicker.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker3.css"/>
+
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+    <link href="font-awesome.css" rel="stylesheet" type="text/css"> 
+    
+       <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="css/style.css">
+
+<body class="w3-light-grey">
+<style>
+html,body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif},
+
+</style>
+<!-- Top container -->
+<nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container">
+
+  <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+      </button>
+      <a class="navbar-brand" href="books.html">Legacy Library</a>
+    </div>
+
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li><a href="#">HomePage<span class="sr-only">(current)</span></a></li>
+        <li><a href="#">Profile</a></li>
+      </ul>
+
+</div>
+</nav>
+
+<!-- Sidebar/menu -->
+<nav class="w3-sidebar w3-collapse w3-white w3-animate-left" style="z-index:3;width:300px;" id="mySidebar"><br>
+  <div class="w3-container w3-row">
+    <div class="w3-col s4">
+      <img src="/w3images/avatar2.png" class="w3-circle w3-margin-right" style="width:46px">
+    </div>
+    <div class="w3-col s8 w3-bar">
+      <span>Welcome, <strong>Admin</strong></span><br>
+      <a href="#" class="w3-bar-item w3-button"><i class="fa fa-envelope"></i></a>
+      <a href="#" class="w3-bar-item w3-button"><i class="fa fa-user"></i></a>
+      <a href="#" class="w3-bar-item w3-button"><i class="fa fa-cog"></i></a>
+    </div>
+  </div>
+  <hr>
+  <div class="w3-container">
+    <h5>Dashboard</h5>
+  </div>
+  <div class="w3-bar-block">
+    <a href="#" class="w3-bar-item w3-button w3-padding-16 w3-hide-large w3-dark-grey w3-hover-black" onclick="w3_close()" title="close menu"><i class="fa fa-remove fa-fw"></i>  Close Menu</a>
+    <a href="adminDashboard2.html" class="w3-bar-item w3-button w3-padding " 
+><i class="fa fa-home fa-fw"></i>  Overview</a>
+    <a href="issue2.html" class="w3-bar-item w3-button w3-padding" style="background-color:#ffa500;"><i class="fa fa-pencil fa-fw" s"></i>  Issue A Book</a>
+    <a href="memebrs2.html" class="w3-bar-item w3-button w3-padding"><i class="fa fa-users  fa-fw"></i>  Members</a>
+    <a href="catgs2.html" class="w3-bar-item w3-button w3-padding"><i class="fa fa-list-alt fa-fw"></i>  Categuries</a>
+    <a href="allbooks2.html" class="w3-bar-item w3-button w3-padding"><i class="fa fa-book fa-fw"></i>  Books</a>
+  </div>
+</nav>
+
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-main" style="margin-left:300px;margin-top:43px;">
+
+  <!-- Header -->
+  <header class="w3-container" style="padding-top:22px">
+    <h5><b><i class="fa fa-pencil fa-fw"></i>  Issue A Book</b></h5>
+  </header>
+
+  <div class="w3-row-padding w3-margin-bottom">
+           <div class="col-md-9">
+        
+  <form>
+
+
+  <div class="form-group">
+    <label for="BookTittle">Book Title</label>
+   <select class="selectpicker" data-live-search="true">
+    <optgroup label="Self-Help">
+    <option data-tokens="Be yorself">Be yorself</option>
+    <option  data-tokens="Girl Boss">Girl Bosss</option>
+    </optgroup>
+    <optgroup label="Young Adults">
+    <option data-tokens="Wonder">Wonder</option>
+    <option data-tokens="Harry Potter">Harry Potter</option>
+    </optgroup>
+</select>
+  </div>
+
+    <div class="form-group">
+    <label for="Member">Member</label>
+   <select class="selectpicker" data-live-search="true">
+ 
+    <option data-tokens="Osama">Osama Ahmed</option>
+    <option  data-tokens="Hind Qahtani">Hind Qahtani</option>
+    <option data-tokens="Lamia sal">Lamia sal</option>
+    <option data-tokens="Sara otibi">Sara otibi</option>
+
+</select>
+
+  </div>
+
+<div class="form-group">
+    <label for="IssuedDate">Issued Date</label>
+<input type="date"> </input>
+
+</div>
+
+<div class="form-group">
+    <label for="DueDate">Due Date</label>
+<input type="date"> </input>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <button type="submit" class="btn btn-default">Issue</button>
+  
+</form>
+
+        </div>
+
+
+
+                   
+        
+   
+
+</div>
+
+    
+
+
+
+  </div>
+
+
+
+
+  <!-- End page content -->
+</div>
+
+
+
+</body>
+
+<link href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-combined.min.css" rel="stylesheet">
+<link rel="stylesheet" type="text/css" media="screen" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.9.3/css/bootstrap-select.min.css">
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script src="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.9.3/js/bootstrap-select.min.js"></script>
+<script>
+
+$('.datepicker').datepicker()
+
+  $(document).ready(function () {
+    $('.selectpicker').selectpicker();
+  });
+
+
+// Get the Sidebar
+var mySidebar = document.getElementById("mySidebar");
+
+// Get the DIV with overlay effect
+var overlayBg = document.getElementById("myOverlay");
+
+// Toggle between showing and hiding the sidebar, and add overlay effect
+function w3_open() {
+    if (mySidebar.style.display === 'block') {
+        mySidebar.style.display = 'none';
+        overlayBg.style.display = "none";
+    } else {
+        mySidebar.style.display = 'block';
+        overlayBg.style.display = "block";
+    }
+}
+
+// Close the sidebar with the close button
+function w3_close() {
+    mySidebar.style.display = "none";
+    overlayBg.style.display = "none";
+}
+
+</script>
+
+</html>
+
