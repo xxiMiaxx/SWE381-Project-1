@@ -417,7 +417,7 @@ section {
 
 #myTable tr {
     /* Add a bottom border to all table rows */
-    border-bottom: 1px solid #ddd; 
+    border-bottom: 1px solid #ddd;
 }
 
 #myTable tr.header, #myTable tr:hover {
@@ -481,4 +481,5 @@ td{
 
 	color:white;}
 
-
+.navbar{
+	background-color: orange; }
