@@ -4,7 +4,12 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <!-- <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <link rel="stylesheet" href="css/stylenav.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.7/css/swiper.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.7/css/swiper.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.7/js/swiper.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.7/js/swiper.min.js"></script>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="css/style.css">
@@ -67,28 +72,29 @@ html,body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
     <img src="images/books_books_books.png" alt="book header">
   </div> -->
 
-  <div class="w3-panel">
-    <form action="/action_page.php">
+  <div class="w3-panel" id="request-panel">
+    <!-- method="post" action="/action_page.php" -->
+    <form name="bookRequest"  id="#bookRequest" onsubmit="bookrequest()">
 
     Book Name:<br>
-    <input type="text" name="BookName" value="">
+    <input type="text" name="BookName" >
     <br>
     Author Name:<br>
-    <input type="text" name="AuthorName" value="">
+    <input type="text" name="AuthorName">
     <br><br>
     Publisher:<br>
-    <input type="text" name="Publisher" value="">
+    <input type="text" name="Publisher">
     <br>
     Edition:<br>
-    <input type="text" name="Edition" value="">
+    <input type="text" name="Edition">
     <br />
     Category:
     <br>
-    <select name="Category">
-    <option value="volvo">Fiction</option>
-    <option value="saab">Self-help</option>
-    <option value="fiat">poetry</option>
-    <option value="audi">Science</option>
+    <select name="Category" id="cat">
+    <option value="fiction">Fiction</option>
+    <option value="self-help">Self-help</option>
+    <option value="poetry">poetry</option>
+    <option value="science">Science</option>
   </select>
     <br><br>
     <input type="submit" value="Submit">

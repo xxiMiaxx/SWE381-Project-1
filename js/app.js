@@ -1,3 +1,52 @@
+$("#bookRequest").submit(function(e) {
+  e.preventDefault();
+});
+
+function bookrequest(){
+
+  var bookname= $("[name=BookName]").val();
+  var authorname= $("[name=AuthorName]").val();
+  var publisher= $("[name=Publisher]").val();
+  var edition= $("[name=Edition]").val();
+  var category= $('#cat').find(":selected").text();
+// after the form is submitted ?
+$("#request-panel").toggle("form");
+// sending to the admin requests as a table
+var requests = new Array();
+    requests.push([bookname, authorname, publisher, edition, category]);
+    // requests.push([1, "John Hammond", "United States"]);
+    // requests.push([2, "Mudassar Khan", "India"]);
+    // requests.push([3, "Suzanne Mathews", "France"]);
+    // requests.push([4, "Robert Schidner", "Russia"]);
+
+    //Create a HTML Table element.
+    var table = document.createElement("TABLE");
+    table.border = "1";
+
+    //Get the count of columns.
+    var columnCount = requests[0].length;
+
+    //Add the header row.
+    var row = table.insertRow(-1);
+    for (var i = 0; i < columnCount; i++) {
+        var headerCell = document.createElement("TH");
+        headerCell.innerHTML = requests[0][i];
+        row.appendChild(headerCell);
+    }
+
+    //Add the data rows.
+    for (var i = 1; i < requests.length; i++) {
+        row = table.insertRow(-1);
+        for (var j = 0; j < columnCount; j++) {
+            var cell = row.insertCell(-1);
+            cell.innerHTML = requests[i][j];
+        }
+    }
+
+    var userRequests = document.getElementById("userRequests");
+    userRequests.innerHTML = "";
+    userRequests.appendChild(table);
+}
 
 
 
