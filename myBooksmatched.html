@@ -46,7 +46,7 @@ html,body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
     <a href="userControlPanel.html" class="w3-bar-item w3-button w3-padding w3-blue"><i class="fa fa-home fa-fw"></i> Home</a>
     <a href="newbooks.html" class="w3-bar-item w3-button w3-padding"><i class="fa fa-pencil fa-fw"></i>  Explore</a>
     <a href="userCatg.html" class="w3-bar-item w3-button w3-padding"><i class="fa fa-list-alt fa-fw"></i>  Categuries</a>
-    <a href="MyBooks.html" class="w3-bar-item w3-button w3-padding"><i class="fa fa-book fa-fw"></i> My Books</a>
+    <a href="myBooksmatched.html" class="w3-bar-item w3-button w3-padding"><i class="fa fa-book fa-fw"></i> My Books</a>
     <a href="requestBook.html" class="w3-bar-item w3-button w3-padding"><i class="fa fa-bell fa-fw"></i>  Request a new Book</a>
     <a href="index.html" class="w3-bar-item w3-button w3-padding"><i class="fa fa-bank fa-fw"></i>  General</a>
     <a href="logsign.html" class="w3-bar-item w3-button w3-padding"><i class="fa fa-sign-out"></i>  Sign Out</a>
@@ -72,31 +72,41 @@ html,body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
     <img src="images/books_books_books.png" alt="book header">
   </div> -->
 
-  <div class="w3-panel" id="request-panel">
-    <!--  action="/action_page.php" method="post" action="php/action_page.php" -->
-    <form name="bookRequest"  id="#bookRequest" onsubmit="bookrequest()">
+  <div class="w3-panel">
+    <table class="table">
+    <thead>
+    <tr> <th> </th> <th>BOOK NAME</th> <th> BORROWING DATE</th> <th> BORROWING PERIOD</th> <th> EXTEND BORROWING PERIOD<th> </tr>
+    </thead>
+    <tbody>
+      <?php
+        $sql = "SELECT ";
+      ?>
+    <tr> <th scope="row">1</th> <td>Mark</td> <td>Otto</td> <td>@mdo</td> <td> <button>EXTEND</button></td> </tr>
+    <tr> <th scope="row">2</th> <td>Jacob</td> <td>Thornton</td> <td>@fat </td> <td><button>EXTEND</button> </td> </tr>
+    <tr> <th scope="row">3</th> <td>Larry</td> <td>the Bird</td> <td>@twitter </td> <td><button>EXTEND</button></td> </tr>
+    </tbody>
+    </table>
+   </div>
 
-    Book Name:<br>
-    <input type="text" name="BookName">
-    <br>
-    Author Name:<br>
-    <input type="text" name="AuthorName">
-    <br><br>
-    Category:
-    <br>
-    <select name="Category" id="cat">
-    <option value="fiction">Fiction</option>
-    <option value="self-help">Self-help</option>
-    <option value="poetry">poetry</option>
-    <option value="science">Science</option>
-  </select>
-    <br><br>
-    <input type="submit" value="Submit">
-  </form>
 
   </div>
 
+  <div class="panel panel-default">
+    <!-- Default panel contents -->
+    <div class="panel-heading" style="font-size:20px; font-weight:bold; background-color:rgb(255, 194, 102); color:rgb(153, 51, 0);">HISTORY BOWRROWED BOOKS </div>
 
+    <!-- Table -->
+   <table class="table">
+   <thead>
+   <tr> <th> </th> <th>BOOK NAME</th> <th> BORROWING DATE</th> </tr>
+   </thead>
+   <tbody>
+   <tr> <th scope="row">1</th> <td>Mark</td> <td>Otto</td>  </tr>
+   <tr> <th scope="row">2</th> <td>Jacob</td> <td>Thornton</td> </tr>
+   <tr> <th scope="row">3</th> <td>Larry</td> <td>the Bird</td> </tr>
+   </tbody>
+   </table>
+  </div>
 
   <!-- Footer -->
   <footer class="w3-container w3-padding-16 w3-light-grey">
@@ -130,10 +140,6 @@ function w3_close() {
     mySidebar.style.display = "none";
     overlayBg.style.display = "none";
 }
-$("#bookRequest").submit(function () {
- sendContactForm();
- return false;
-});
 </script>
 
 </body>

@@ -1,51 +1,35 @@
-$("#bookRequest").submit(function(e) {
-  e.preventDefault();
-});
 
 function bookrequest(){
 
   var bookname= $("[name=BookName]").val();
   var authorname= $("[name=AuthorName]").val();
-  var publisher= $("[name=Publisher]").val();
-  var edition= $("[name=Edition]").val();
+//  var publisher= $("[name=Publisher]").val();
+  //var edition= $("[name=Edition]").val();
   var category= $('#cat').find(":selected").text();
 // after the form is submitted ?
 $("#request-panel").toggle("form");
 // sending to the admin requests as a table
-var requests = new Array();
-    requests.push([bookname, authorname, publisher, edition, category]);
-    // requests.push([1, "John Hammond", "United States"]);
-    // requests.push([2, "Mudassar Khan", "India"]);
-    // requests.push([3, "Suzanne Mathews", "France"]);
-    // requests.push([4, "Robert Schidner", "Russia"]);
-
-    //Create a HTML Table element.
-    var table = document.createElement("TABLE");
-    table.border = "1";
-
-    //Get the count of columns.
-    var columnCount = requests[0].length;
-
-    //Add the header row.
-    var row = table.insertRow(-1);
-    for (var i = 0; i < columnCount; i++) {
-        var headerCell = document.createElement("TH");
-        headerCell.innerHTML = requests[0][i];
-        row.appendChild(headerCell);
-    }
-
-    //Add the data rows.
-    for (var i = 1; i < requests.length; i++) {
-        row = table.insertRow(-1);
-        for (var j = 0; j < columnCount; j++) {
-            var cell = row.insertCell(-1);
-            cell.innerHTML = requests[i][j];
-        }
-    }
-
+var table = document.createElement("TABLE");
+var row = table.insertRow(0);
+var cell = row.insertCell(0);
+var cell2 = row.insertCell(1);
+cell.innerHTML = "Book Name";
+cell2.innerHTML = "Category";
+var secondRow = table.insertRow(1);
+var cell1 = secondRow.insertCell(0);
+cell11.innerHTML = bookname;
+var cell22 = secondRow.insertCell(1);
+cell22.innerHTML = category;
+if(authorname != ""){
+  var cell3 = row.insertCell(2);
+  cell3.innerHTML = "Author Name";
+  var cell4 = secondRow.insertCell(2);
+}
     var userRequests = document.getElementById("userRequests");
     userRequests.innerHTML = "";
     userRequests.appendChild(table);
+    var title = document.getElementById("notifications");
+    title.innerHTML = "Members requests of new books";
 }
 
 

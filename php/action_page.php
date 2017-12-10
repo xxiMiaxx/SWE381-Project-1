@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-<title>Request Book</title>
+<title>W3.CSS Template</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <!-- <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> -->
@@ -73,27 +73,13 @@ html,body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
   </div> -->
 
   <div class="w3-panel" id="request-panel">
-    <!--  action="/action_page.php" method="post" action="php/action_page.php" -->
-    <form name="bookRequest"  id="#bookRequest" onsubmit="bookrequest()">
+    <!--  action="/action_page.php" -->
+    <?php
+      echo $_POST["BookName"];
 
-    Book Name:<br>
-    <input type="text" name="BookName">
-    <br>
-    Author Name:<br>
-    <input type="text" name="AuthorName">
-    <br><br>
-    Category:
-    <br>
-    <select name="Category" id="cat">
-    <option value="fiction">Fiction</option>
-    <option value="self-help">Self-help</option>
-    <option value="poetry">poetry</option>
-    <option value="science">Science</option>
-  </select>
-    <br><br>
-    <input type="submit" value="Submit">
-  </form>
-
+    ?>
+    <?php echo $_POST["name"]; ?>
+<h2>Your book request has been sent to the admin, once the book is available, the admin will issue the book and you'll hav it in your account </h2>
   </div>
 
 
@@ -130,10 +116,6 @@ function w3_close() {
     mySidebar.style.display = "none";
     overlayBg.style.display = "none";
 }
-$("#bookRequest").submit(function () {
- sendContactForm();
- return false;
-});
 </script>
 
 </body>
