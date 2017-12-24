@@ -1,45 +1,9 @@
-#margin {
-  margin-top:20px;
-  margin-left: 150px;
-}
-#margins {
-  margin-right:570px;
-}
-#marginright
-{
-  margin-right:20px;
-  font-family: cursive, Helvetica;
-max-height: 20px;
-}
-#op{
-  opacity: 0.75;
 
+margin{
+
+margin-left:50%;	
 }
 
-.color{
-  color: white;
-}
-
-#drop
-{
-  z-index: 0;
-}
-.colors
-{
-  background-color:black;
-}
-body{
-
-  background-image: url("b5.jpg");
-  background-attachment: fixed;
-
-  
-  /*rgb(255, 240, 179);*/
-}
-#marginright
-{
-   margin-right: 58px;
-}
 
 input.hidden {
     position: absolute;
@@ -57,15 +21,46 @@ input.hidden {
 
   .tital{ font-size:16px; font-weight:500;}
 
+span#colors.hf{
+	font-size:25px;
+	margin-right:900px;
+}
 
+div.panel-heading.u{
+	
+	padding-bottom:50px;
+	
+}
+
+.bookpage{
+margin-left: 300px;	
+}
+div.clearfix.pad{
+	
+	padding-bottom:50px;
+	
+}
 
    .bot-border{ border-bottom:1px #f8f8f8 solid;  margin:5px 0  5px 0}  
+   
+   .marginPhoto{
+	   margin-right: 50px;
+   }
+   
+   .marginBor{
+	   
+	   margin-left: 170px;
+   }
+   
 
-body {margin:0;}
+body {
+	margin:0;
+}
 
 .topnav {
   overflow: hidden;
   background-color: black;
+
 }
 
 .topnav a {
